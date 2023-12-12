@@ -10,7 +10,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect('mongodb+srv://kowy:bos181973@cluster0.rkwz2dq.mongodb.net/ecommerce')
+mongoose.connect('mongodb+srv://kowy:bos181973@cluster0.rkwz2dq.mongodb.net/ecommerce?retryWrites=true&w=majority')
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
